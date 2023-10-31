@@ -44,8 +44,31 @@ function oneRound(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = prompt("rock, paper, scissors?");
+function game() {
+    let i;
+    let playerScore = 0;
+    let computerScore = 0;
+    let tie = 0;
 
-let gameResult = oneRound(playerSelection, getComputerChoice());
+    for (i = 0; i < 5; i++) {
+    let playerSelection = prompt("rock, paper, scissors?");
+    let gameResult = oneRound(playerSelection, getComputerChoice());
 
+    if (gameResult === "player wins!") {
+        playerScore++;
+    } else if (gameResult === "computer wins!") {
+        computerScore++;
+    } else if (gameResult === "tie!") {
+        tie++;
+    }
+
+    }
+    console.log(`score: computer: ${computerScore}, player: ${playerScore}, tie: ${tie}`);
+
+}
+
+game();
+
+//let playerSelection = prompt("rock, paper, scissors?");
+//let gameResult = oneRound(playerSelection, getComputerChoice());
 //getComputerChoice();
