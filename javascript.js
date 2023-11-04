@@ -69,6 +69,4 @@ function game() {
 
 game();
 
-//let playerSelection = prompt("rock, paper, scissors?");
-//let gameResult = oneRound(playerSelection, getComputerChoice());
-//getComputerChoice();
+
